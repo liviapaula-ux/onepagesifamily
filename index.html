@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornada Parentalidade iFood 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #3E3E3E;
+        }
+
+        .ifood-red { color: #EA1D2C; }
+        .bg-ifood-red { background-color: #EA1D2C; }
+        .border-ifood-red { border-color: #EA1D2C; }
+        
+        .road-wrapper {
+            width: 100%;
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .milestones-container {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .phase-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        /* Phase Label */
+        .phase-badge {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .phase-badge span {
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 1.5px;
+            background: #F2F2F2;
+            padding: 4px 12px;
+            border-radius: 4px;
+            color: #666;
+        }
+
+        .phase-line {
+            flex-grow: 1;
+            height: 1px;
+            background: #E6E6E6;
+        }
+
+        /* Card Style */
+        .milestone-card {
+            flex: 1;
+            min-width: 180px;
+            max-width: 230px;
+            background: #FFFFFF;
+            border: 1px solid #F2F2F2;
+            border-radius: 12px;
+            padding: 14px;
+            position: relative;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .milestone-card:hover {
+            border-color: #EA1D2C;
+            box-shadow: 0 4px 12px rgba(234, 29, 44, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .icon-wrapper {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: #F7F7F7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 4px;
+        }
+
+        .milestone-card.featured {
+            background: #FFF5F6;
+            border-color: #FFD2D6;
+        }
+
+        .milestone-card.featured .icon-wrapper {
+            background: #EA1D2C;
+            color: white;
+        }
+
+        .text-step-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #000000;
+            line-height: 1.2;
+        }
+
+        .text-step-desc {
+            font-size: 0.7rem;
+            color: #666666;
+            line-height: 1.4;
+        }
+
+        /* Progress Dots */
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #D1D1D1;
+            margin-bottom: 4px;
+        }
+
+        .active-dot {
+            background: #EA1D2C;
+            box-shadow: 0 0 0 3px rgba(234, 29, 44, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            .phase-row {
+                justify-content: center;
+            }
+            .milestone-card {
+                min-width: 100%;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Header Executivo -->
+    <header class="max-w-6xl mx-auto mb-10 flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-gray-100 pb-6">
+        <div>
+            <div class="flex items-center gap-2 mb-2">
+                <div class="w-8 h-8 bg-ifood-red rounded-full flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm0-8h-2V7h2v2zm4 8h-2V7h2v10z"/></svg>
+                </div>
+                <h2 class="font-bold text-gray-400 text-sm uppercase tracking-widest">People e Saúde</h2>
+            </div>
+            <h1 class="text-4xl font-extrabold text-black tracking-tight">Jornada Parentalidade <span class="ifood-red">iFood</span></h1>
+            <p class="text-gray-500 mt-2 font-medium">Ecossistema de suporte 360º para a nova fase do Foodlover.</p>
+        </div>
+        <div class="text-right hidden md:block">
+            <span class="text-xs font-bold text-gray-400 block uppercase">Versão 2026</span>
+            <span class="text-sm font-bold text-black italic">Feeding the future.</span>
+        </div>
+    </header>
+
+    <main class="road-wrapper">
+        <div class="milestones-container">
+
+            <!-- FASE 1: ACOLHER -->
+            <section>
+                <div class="phase-badge">
+                    <span class="ifood-red">01. Tempo de Acolher</span>
+                    <div class="phase-line"></div>
+                    <p class="text-[9px] text-gray-400 font-bold uppercase">1º e 2º Trimestre</p>
+                </div>
+                <div class="phase-row">
+                    <div class="milestone-card">
+                        <div class="status-dot active-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4 ifood-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg></div>
+                        <h3 class="text-step-title">Inscrição no Programa</h3>
+                        <p class="text-step-desc">Adesão oficial e início do protocolo de People e Saúde.</p>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="status-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4 ifood-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg></div>
+                        <h3 class="text-step-title">Isenção de Copay</h3>
+                        <p class="text-step-desc">Garantia de segurança financeira para o ciclo gestacional.</p>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="status-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4 ifood-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg></div>
+                        <h3 class="text-step-title">Checkpoint Saúde</h3>
+                        <p class="text-step-desc">Primeiro alinhamento clínico e suporte social.</p>
+                    </div>
+                    <div class="milestone-card featured">
+                        <div class="status-dot active-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg></div>
+                        <h3 class="text-step-title">Kit Mamãe</h3>
+                        <p class="text-step-desc">Reconhecimento tangível iFood para a fase inicial.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FASE 2: PLANEJAR -->
+            <section>
+                <div class="phase-badge">
+                    <span class="ifood-red">02. Tempo de Planejar</span>
+                    <div class="phase-line"></div>
+                    <p class="text-[9px] text-gray-400 font-bold uppercase">3º Trimestre</p>
+                </div>
+                <div class="phase-row">
+                    <div class="milestone-card">
+                        <div class="status-dot active-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4 ifood-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg></div>
+                        <h3 class="text-step-title">Mapeamento Saúde</h3>
+                        <p class="text-step-desc">Atualização técnica de indicadores para suporte ao parto.</p>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="status-dot active-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4 ifood-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg></div>
+                        <h3 class="text-step-title">Mentorias Gestante</h3>
+                        <p class="text-step-desc">Envolvimento BPs e Lideranças, Planejamento licença, acolhimento.</p>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="status-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4 ifood-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg></div>
+                        <h3 class="text-step-title">Roda de Pais</h3>
+                        <p class="text-step-desc">Comunidade e troca de experiências pré-chegada.</p>
+                    </div>
+                    <div class="milestone-card featured">
+                        <div class="status-dot active-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg></div>
+                        <h3 class="text-step-title">Kit Bebê</h3>
+                        <p class="text-step-desc">Suporte ao enxoval e preparação do ambiente familiar.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FASE 3: CUIDAR -->
+            <section>
+                <div class="phase-badge">
+                    <span class="ifood-red">03. Tempo de Cuidar</span>
+                    <div class="phase-line"></div>
+                    <p class="text-[9px] text-gray-400 font-bold uppercase">Nascimento e Licença</p>
+                </div>
+                <div class="phase-row">
+                    <div class="milestone-card">
+                        <div class="status-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4 ifood-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg></div>
+                        <h3 class="text-step-title">Plano e Licenças</h3>
+                        <p class="text-step-desc">Inclusão dependentes e ativação de licenças estendidas.</p>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="status-dot active-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4 ifood-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg></div>
+                        <h3 class="text-step-title">Checkpoint Bebê</h3>
+                        <p class="text-step-desc">Monitoramento preventivo e saúde pediátrica inicial.</p>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="status-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4 ifood-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg></div>
+                        <h3 class="text-step-title">Mentorias Gestante (opcional)</h3>
+                        <p class="text-step-desc">Planejamento do retorno ao trabalho.</p>
+                    </div>
+                    <div class="milestone-card">
+                        <div class="status-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4 ifood-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2"></path></svg></div>
+                        <h3 class="text-step-title">Auxílio Financeiro</h3>
+                        <p class="text-step-desc">Isenção copay bebê e reembolso de despesas iniciais.</p>
+                    </div>
+                    <div class="milestone-card featured">
+                        <div class="status-dot active-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg></div>
+                        <h3 class="text-step-title">Kit Nascimento</h3>
+                        <p class="text-step-desc">Celebração da nova vida no ecossistema iFood.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FASE 4: SUSTENTAR -->
+            <section>
+                <div class="phase-badge">
+                    <span class="ifood-red">04. Tempo de Sustentar</span>
+                    <div class="phase-line"></div>
+                    <p class="text-[9px] text-gray-400 font-bold uppercase">Retorno + 6 Meses</p>
+                </div>
+                <div class="phase-row">
+                    <div class="milestone-card">
+                        <div class="status-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4 ifood-red" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
+                        <h3 class="text-step-title">Saúde Mental</h3>
+                        <p class="text-step-desc">Apoio psicológico e equilíbrio para o Foodlover e família.</p>
+                    </div>
+                    <div class="milestone-card featured">
+                        <div class="status-dot active-dot"></div>
+                        <div class="icon-wrapper"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857"></path></svg></div>
+                        <h3 class="text-step-title">Mentorias finais</h3>
+                        <p class="text-step-desc">Envolvimento lideranças e BPs para fechamento do ciclo.</p>
+                    </div>
+                    <div class="milestone-card bg-black text-white border-black">
+                        <div class="status-dot active-dot"></div>
+                        <div class="icon-wrapper bg-white text-black"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg></div>
+                        <h3 class="text-step-title text-white">Jornada Concluída</h3>
+                        <p class="text-step-desc text-gray-400">Ciclo de People e Saúde encerrado com sucesso.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="max-w-6xl mx-auto mt-12 pt-6 border-t border-gray-100 flex justify-between items-center text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+        <p>iFood • People e Saúde © 2026</p>
+        <div class="flex gap-4">
+            <span class="hover:text-ifood-red cursor-pointer">Segurança</span>
+            <span class="hover:text-ifood-red cursor-pointer">Bem-estar</span>
+        </div>
+    </footer>
+
+</body>
+</html>
